@@ -1,4 +1,11 @@
-//Time Complexity without memo will be 2 ^(m+n)
+/* NOTES 
+
+Without memo{ TC =  O(2 ^(m+n)) , SC = O(m+n) }
+
+With memo { TC = O(m * n) , SC = O(m+n)}
+
+
+*/
 
 const gridTraveler = (m,n,memo = {}) => {
     const key = m + ',' + n;
