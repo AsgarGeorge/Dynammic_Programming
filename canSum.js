@@ -1,3 +1,13 @@
+/*
+Notes :
+n = targetSum
+m = numbers.length
+
+Brute Force: TC = O(n^m) , SC = O(m)
+Memoization: TC = O(m*n) , SC = O(m)
+*/
+
+
 const canSum = (targetSum,numbers,memo= {}) =>{
     if(targetSum in memo) return memo[targetSum];
     if(targetSum === 0) return true;

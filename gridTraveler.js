@@ -1,9 +1,9 @@
 /* NOTES 
+m = rows
+n = columns
 
-Without memo{ TC =  O(2 ^(m+n)) , SC = O(m+n) }
-
-With memo { TC = O(m * n) , SC = O(m+n)}
-
+Brute Force: TC = O(2^(m+n)) , SC = O(m+n)
+Memoization: TC = O(m*n) , SC = O(m+n) 
 
 */
 
