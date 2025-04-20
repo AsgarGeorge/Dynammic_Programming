@@ -19,12 +19,17 @@ SELECT
 FROM 
     customer_details
 WHERE 
-    TO_DATE(join_date, 'DD/MM/YYYY') >= ADD_MONTHS(TRUNC(SYSDATE), -5)
+    TO_DATE(join_date, 'DD/MM/YYYY') >= ADD_MONTHS(TRUNC(SYSDATE), -2)
 GROUP BY 
     TO_CHAR(TO_DATE(join_date, 'DD/MM/YYYY'), 'YYYY-MM')
 ORDER BY 
     month;
-    
+   
+   
+   SELECT TRUNC(SYSDATE) AS today_date FROM dual;
+   
+   SELECT ADD_MONTHS(TRUNC(SYSDATE), -2) AS old_date FROM dual;
+
    
 BEGIN
    FOR t IN (SELECT table_name FROM user_tables) LOOP
